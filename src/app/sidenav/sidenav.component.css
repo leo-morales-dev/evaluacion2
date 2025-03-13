@@ -1,0 +1,91 @@
+.sidenav {
+  width: 70px;
+  height: 100vh;
+  background-color: #11121a;
+  color: #5e63ff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  z-index: 1100;
+  padding-top: 10px;
+}
+
+.sidenav.expanded {
+  width: 250px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 64px;
+  background-color: #11121a;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 10px;
+}
+
+.nav-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5e63ff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.nav-list a i {
+  font-size: 20px;
+  width: 25px;
+  text-align: center;
+}
+
+.nav-list a span {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 140px;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.sidenav:not(.expanded) .logo-text,
+.sidenav:not(.expanded) .nav-list a span {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content {
+  flex: 1;
+  margin-left: 70px;
+  transition: margin-left 0.3s ease;
+}
+
+.content.expanded {
+  margin-left: 250px;
+}
+
+.content.collapsed {
+  margin-left: 70px;
+}

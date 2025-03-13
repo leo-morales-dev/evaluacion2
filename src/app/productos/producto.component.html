@@ -1,0 +1,53 @@
+<div style="margin: 20px;">
+    <h1>CATÁLOGO DE PRODUCTOS</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DESCRIPCIÓN</th>
+                <th>PRECIO</th>
+                <th>SELECCIONAR</th>
+                <th>ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos; trackBy: trackById">
+                <td>{{ producto.id }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.precio }}</td>
+                <td>
+                    <button type="button" class="btn btn-info" (click)="seleccionarProducto(producto)">
+                        Seleccionar
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="eliminarProducto(producto.id!)">
+                        Eliminar
+                    </button>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <p>
+            ID:<input type="number" class="form-control" [(ngModel)]="producto.id" [attr.placeholder]="'Ingrese un ID'" (change)="convertirIdEntero()" [ngModelOptions]="{standalone: true}" />
+        </p>        
+        <p>
+            Descripción:<input type="text" class="form-control" [(ngModel)]="producto.descripcion" [attr.placeholder]="'Ingrese una descripcion'" (keypress)="validarTexto($event)" />
+        </p>        
+        <p>
+            Precio:<input type="number" class="form-control" [(ngModel)]="producto.precio" [attr.placeholder]="'Ingrese un precio'" [ngModelOptions]="{standalone: true}" />
+        </p>
+        <p>
+            <button type="button" class="btn btn-primary" (click)="agregarProducto()" [disabled]="productoEnModificacion()">
+                Agregar
+            </button>
+            <button type="button" class="btn btn-success" (click)="modificarProducto()">
+                Modificar
+            </button>
+        </p>
+    </div>
+</div>

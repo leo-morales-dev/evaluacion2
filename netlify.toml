@@ -1,0 +1,6 @@
+[build]
+  command = "ng build --configuration=production"
+  publish = "dist/evaluacion/browser"
+
+[build.environment]
+  NODE_ENV = "production"

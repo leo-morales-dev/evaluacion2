@@ -1,0 +1,38 @@
+.about-container {
+    max-width: 900px;
+    margin-left: -30px;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.info-card {
+    background-color: #4c4e86;;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.info-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
