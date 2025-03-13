@@ -1,6 +1,0 @@
-[build]
-  command = "npm install --verbose && npx ng build --configuration=production --verbose"
-  publish = "dist/evaluacion/browser"
-
-[build.environment]
-  NODE_ENV = "production"
